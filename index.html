@@ -233,6 +233,31 @@
   }
   .sticky::before{content:"";position:absolute;top:-10px;left:calc(50% - 30px);width:60px;height:18px;background:rgba(246,201,214,.9);transform:rotate(3deg)}
 
+  /* --- galeri foto (4 polaroid) --- */
+  .gallery{
+    position:relative;border-radius:24px;padding:50px 24px 56px;overflow:hidden;
+    background-color:var(--cream);
+    background-image:radial-gradient(var(--pink-soft) 22%,transparent 24%);
+    background-size:26px 26px;
+    box-shadow:0 8px 22px rgba(90,58,46,.12);
+  }
+  .gal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 22px;align-items:start}
+  .gal{
+    position:relative;background:#fff;padding:9px 9px 40px;width:100%;
+    box-shadow:0 10px 22px rgba(0,0,0,.22);
+    transition:transform .3s;
+  }
+  .gal:hover{transform:rotate(0) scale(1.06)!important;z-index:2}
+  .gal:nth-child(1){transform:rotate(-4deg)}
+  .gal:nth-child(2){transform:rotate(3deg);margin-top:26px}
+  .gal:nth-child(3){transform:rotate(-2deg)}
+  .gal:nth-child(4){transform:rotate(4deg);margin-top:26px}
+  .gal .tape{position:absolute;top:-11px;left:calc(50% - 34px);width:68px;height:20px;background:rgba(246,201,214,.9);transform:rotate(-3deg)}
+  .gal:nth-child(even) .tape{background:rgba(207,232,228,.95);transform:rotate(4deg)}
+  .gal .shot{position:relative;aspect-ratio:3/4;background:var(--mint);overflow:hidden;display:grid;place-items:center;font-size:3rem}
+  .gal .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .gal figcaption{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-family:'Pacifico',cursive;color:var(--pink);font-size:.95rem}
+
   /* --- hobi --- */
   .board{
     position:relative;background:var(--mint);border-radius:24px;padding:40px 22px 44px;
@@ -308,6 +333,10 @@
     .id-wrap{grid-template-columns:1fr;gap:34px}
     .food-grid{grid-template-columns:1fr;justify-items:center}
     .food-grid .polaroid:nth-child(2){margin-top:0}
+    .gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 16px}
+    .gallery{padding:44px 16px 48px}
+    .gal:nth-child(2){margin-top:0}
+    .gal:nth-child(4){margin-top:0}
     .contact-grid{grid-template-columns:1fr}
     .notebook{padding:44px 16px 24px 54px}
     .notebook::before{left:38px}
@@ -333,24 +362,24 @@
     <span class="star" style="bottom:20%;left:8%;color:#fff;font-size:1.3rem">★</span>
     <span class="star" style="top:4%;right:24%;color:#fff;font-size:1rem">★</span>
 
-    <!-- polaroid kiri -->
+    <!-- polaroid kiri: Intan1.jpeg -->
     <figure class="pol l">
       <div class="tape"></div>
       <div class="ph">
         <span aria-hidden="true">🌷</span>
-        <img src="foto.jpg" alt="" onerror="this.remove();">
+        <img src="Intan1.jpeg" alt="" onerror="this.remove();">
       </div>
       <small>Intan</small>
     </figure>
 
-    <!-- polaroid kanan -->
+    <!-- polaroid kanan: Intan2.jpeg -->
     <figure class="pol r">
       <div class="binder"></div>
       <div class="ph">
-        <span aria-hidden="true">🍰</span>
-        <img src="makanan1.jpg" alt="" onerror="this.remove();">
+        <span aria-hidden="true">🎀</span>
+        <img src="Intan2.jpeg" alt="" onerror="this.remove();">
       </div>
-      <small>yummy!</small>
+      <small>hello!</small>
     </figure>
 
     <!-- FOLDER: klik untuk membuka -->
@@ -391,6 +420,7 @@
   <nav class="nav" aria-label="Navigasi">
     <a href="#identitas">Identitas</a>
     <a href="#tentang">Tentang</a>
+    <a href="#galeri">Galeri</a>
     <a href="#hobi">Hobi</a>
     <a href="#makanan">Makanan</a>
     <a href="#kontak">Kontak</a>
@@ -405,8 +435,7 @@
         <div class="tape"></div>
         <div class="photo">
           <span aria-hidden="true">🌷</span>
-          <!-- Unggah fotomu ke repository dengan nama: foto.jpg -->
-          <img src="foto.jpg" alt="Foto profil Intan" onerror="this.remove();">
+          <img src="Intan1.jpeg" alt="Foto profil Intan" onerror="this.remove();">
         </div>
         <figcaption>Hi, it's me!</figcaption>
       </figure>
@@ -437,6 +466,47 @@
       </p>
     </div>
     <div class="sticky">"Ceroboh sedikit tidak apa-apa, yang penting terus mencoba."</div>
+  </section>
+
+  <!-- GALERI FOTO (Intan1 - Intan4) -->
+  <section class="sec reveal" id="galeri">
+    <span class="label">Galeri Intan</span>
+    <div class="gallery">
+      <div class="gal-grid">
+        <figure class="gal">
+          <div class="tape"></div>
+          <div class="shot">
+            <span aria-hidden="true">🌷</span>
+            <img src="Intan1.jpeg" alt="Foto Intan 1" onerror="this.remove();">
+          </div>
+          <figcaption>moment 1</figcaption>
+        </figure>
+        <figure class="gal">
+          <div class="tape"></div>
+          <div class="shot">
+            <span aria-hidden="true">🎀</span>
+            <img src="Intan2.jpeg" alt="Foto Intan 2" onerror="this.remove();">
+          </div>
+          <figcaption>moment 2</figcaption>
+        </figure>
+        <figure class="gal">
+          <div class="tape"></div>
+          <div class="shot">
+            <span aria-hidden="true">🌸</span>
+            <img src="Intan3.jpeg" alt="Foto Intan 3" onerror="this.remove();">
+          </div>
+          <figcaption>moment 3</figcaption>
+        </figure>
+        <figure class="gal">
+          <div class="tape"></div>
+          <div class="shot">
+            <span aria-hidden="true">⭐</span>
+            <img src="Intan4.jpeg" alt="Foto Intan 4" onerror="this.remove();">
+          </div>
+          <figcaption>moment 4</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
   <!-- HOBI & MINAT -->
@@ -523,6 +593,7 @@
 
   <footer>
     <h2>Terima Kasih!</h2>
+    <p>Dipublikasikan dengan GitHub Pages ☁️</p>
     <button type="button" id="tutup2">↑ Kembali ke folder</button>
     <small>Intan Roudhotul Munawaroh · 2026</small>
   </footer>
@@ -591,6 +662,20 @@
 
 </body>
 </html>
+
+
+
+
+    
+
+
+      
+
+
+
+ 
+      
+
    
 
 
