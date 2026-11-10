@@ -2,283 +2,340 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profil Intan Roudhotul Munawaroh</title>
 
-<title>My Profile | Intan ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  :root{
+    --pink:#d9748f;
+    --pink-soft:#f6c9d6;
+    --cream:#f8f0b4;
+    --mint:#cfe8e4;
+    --green:#9aa95a;
+    --lilac:#c9b8e0;
+    --brown:#5a3a2e;
+    --ink:#3b2f33;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Fredoka',sans-serif;
+    color:var(--ink);
+    background:#e9d9e0;
+    background-image:
+      linear-gradient(90deg,rgba(255,255,255,.35) 50%,transparent 50%),
+      linear-gradient(rgba(255,255,255,.35) 50%,transparent 50%);
+    background-size:36px 36px;
+    padding:32px 16px 64px;
+  }
 
-body {
-    font-family: 'Trebuchet MS', sans-serif;
-    background: linear-gradient(135deg, #ffd6e8, #fff5fa, #ffc1dc);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-    overflow-x: hidden;
-}
+  .slide{
+    position:relative;
+    width:min(1100px,100%);
+    aspect-ratio:16/9;
+    margin:0 auto 40px;
+    border-radius:28px;
+    border:4px solid #fff;
+    box-shadow:0 14px 34px rgba(90,58,46,.18);
+    overflow:hidden;
+    padding:clamp(20px,4vw,48px);
+    display:flex;
+    flex-direction:column;
+  }
+  .slide::after{
+    content:attr(data-no);
+    position:absolute;right:22px;bottom:14px;
+    font-size:.8rem;font-weight:600;color:rgba(59,47,51,.55);
+    background:rgba(255,255,255,.7);padding:2px 10px;border-radius:99px;
+  }
 
-/* Background */
-body::before {
-    content: "♡";
-    position: fixed;
-    font-size: 250px;
-    color: rgba(255,255,255,0.3);
-    top: 5%;
-    left: 5%;
-    animation: rotate 12s linear infinite;
-    pointer-events: none;
-}
+  .bg-dots{background-color:var(--cream);
+    background-image:radial-gradient(var(--pink-soft) 22%,transparent 24%);
+    background-size:26px 26px;}
+  .bg-gingham{background-color:var(--pink-soft);
+    background-image:
+      linear-gradient(90deg,rgba(255,255,255,.55) 50%,transparent 50%),
+      linear-gradient(rgba(255,255,255,.55) 50%,transparent 50%);
+    background-size:34px 34px;}
+  .bg-mint{background-color:var(--mint);}
+  .bg-stars{background-color:var(--pink);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpolygon points='30,10 34,23 48,23 37,31 41,45 30,37 19,45 23,31 12,23 26,23' fill='%23f8f0b4'/%3E%3C/svg%3E");
+    background-size:60px 60px;}
+  .bg-green{background-color:#dfe6bd;
+    background-image:
+      linear-gradient(90deg,rgba(255,255,255,.6) 50%,transparent 50%),
+      linear-gradient(rgba(255,255,255,.6) 50%,transparent 50%);
+    background-size:18px 18px;}
+  .bg-lilac{background-color:#e6dcf2;
+    background-image:
+      linear-gradient(90deg,rgba(255,255,255,.55) 50%,transparent 50%),
+      linear-gradient(rgba(255,255,255,.55) 50%,transparent 50%);
+    background-size:30px 30px;}
 
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+  .label{
+    display:inline-block;align-self:flex-start;
+    background:var(--cream);color:var(--pink);
+    font-family:'Pacifico',cursive;
+    font-size:clamp(1.2rem,3vw,2rem);
+    padding:4px 18px;border-radius:8px;
+    box-shadow:3px 3px 0 var(--pink);
+    margin-bottom:clamp(10px,2vw,22px);
+    transform:rotate(-2deg);
+  }
+  .panel{
+    background:rgba(255,255,255,.88);
+    border-radius:22px;
+    padding:clamp(14px,2.6vw,30px);
+    box-shadow:0 6px 18px rgba(90,58,46,.12);
+  }
 
-/* Animasi hati */
-.heart {
-    position: fixed;
-    bottom: -30px;
-    color: #ff69a6;
-    font-size: 25px;
-    animation: float 8s linear infinite;
-    pointer-events: none;
-}
+  /* COVER */
+  .cover{align-items:center;justify-content:center;text-align:center}
+  .cover .folder{
+    position:relative;width:min(560px,92%);
+    background:var(--brown);border-radius:10px 26px 26px 26px;
+    padding:clamp(22px,4vw,44px) clamp(16px,3vw,34px);
+    box-shadow:0 12px 26px rgba(0,0,0,.25);
+    color:#fff;
+  }
+  .cover .folder::before{
+    content:"";position:absolute;top:-20px;left:0;width:38%;height:24px;
+    background:var(--brown);border-radius:12px 12px 0 0;
+  }
+  .cover .small{font-style:italic;font-family:'Playfair Display',serif;opacity:.85;font-size:clamp(.8rem,1.6vw,1.05rem)}
+  .cover h1{
+    font-family:'Pacifico',cursive;font-weight:400;
+    font-size:clamp(2rem,6vw,4rem);line-height:1.1;margin:8px 0;color:#fff;
+  }
+  .cover h1 span{display:block;font-family:'Fredoka',sans-serif;font-weight:600;font-size:.45em;letter-spacing:.08em}
+  .tape{
+    position:absolute;width:110px;height:28px;background:rgba(246,201,214,.85);
+    top:-12px;right:24px;transform:rotate(6deg);
+  }
+  .bow{position:absolute;left:-14px;top:18px;font-size:2rem;transform:rotate(-15deg)}
+  .cover .nama-cover{margin-top:10px;font-weight:500;font-size:clamp(.9rem,2vw,1.2rem);color:var(--cream)}
+  .scroll-hint{margin-top:22px;font-size:.9rem;color:var(--brown);background:rgba(255,255,255,.75);padding:4px 14px;border-radius:99px}
 
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    20% { opacity: 0.8; }
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
-}
+  /* IDENTITAS */
+  .identitas .row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(14px,3vw,32px);flex:1;align-items:center}
+  .polaroid{
+    background:#fff;padding:12px 12px 36px;border-radius:6px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);transform:rotate(-3deg);
+    max-width:300px;margin:0 auto;position:relative;
+  }
+  .polaroid .tape{width:80px;height:22px;top:-10px;left:calc(50% - 40px);right:auto;transform:rotate(-4deg)}
+  .photo{
+    width:100%;aspect-ratio:1/1;background:var(--mint);
+    border-radius:4px;overflow:hidden;display:grid;place-items:center;
+    font-size:4rem;color:var(--pink);position:relative;
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
+  .polaroid figcaption{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:'Pacifico',cursive;color:var(--pink);font-size:1.05rem}
+  dl.data{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:clamp(.85rem,1.8vw,1.15rem)}
+  dt{font-weight:600;color:var(--pink)}
+  dd{font-weight:500}
 
-/* Kartu utama */
-.container {
-    width: 100%;
-    max-width: 500px;
-    background: rgba(255,255,255,0.9);
-    padding: 35px 25px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(230,90,150,0.2);
-    border: 3px solid white;
-    position: relative;
-    z-index: 2;
-    animation: appear 1.2s ease;
-}
+  /* TENTANG */
+  .tentang .panel{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .tentang p{font-size:clamp(.9rem,1.9vw,1.3rem);line-height:1.7}
+  .tentang .quote{
+    margin-top:14px;font-family:'Playfair Display',serif;font-style:italic;
+    color:var(--pink);font-size:clamp(.85rem,1.7vw,1.15rem);
+  }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  /* HOBI */
+  .hobi .grid{
+    flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2vw,22px);align-content:center;
+  }
+  .tag{
+    background:var(--pink);color:#fff;text-align:center;
+    padding:clamp(10px,1.8vw,22px) 10px;border-radius:8px;
+    font-weight:500;font-size:clamp(.9rem,2vw,1.4rem);
+    box-shadow:4px 4px 0 var(--cream);
+  }
+  .tag small{display:block;font-size:.65em;font-weight:400;opacity:.92;margin-top:4px}
+  .tag:nth-child(even){background:var(--green);transform:rotate(1.5deg)}
+  .tag:nth-child(odd){transform:rotate(-1.5deg)}
+  .tag:last-child:nth-child(odd){grid-column:1 / -1}
 
-/* Foto profil */
-.profile {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #ffb6d5;
-    box-shadow: 0 5px 20px #ffc5df;
-    margin-bottom: 18px;
-    animation: bounce 3s ease-in-out infinite;
-}
+  /* MAKANAN */
+  .foods{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,3vw,34px);align-items:center}
+  .foods .polaroid{max-width:250px;padding:10px 10px 38px;width:100%}
+  .foods .polaroid:nth-child(2){transform:rotate(2deg)}
+  .foods .polaroid:nth-child(3){transform:rotate(-2deg)}
+  .foods .photo{aspect-ratio:4/3;font-size:3rem}
+  .foods figcaption{font-size:clamp(.8rem,1.6vw,1.05rem)!important}
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
+  /* KONTAK */
+  .kontak .cards{flex:1;display:grid;grid-template-columns:minmax(0,440px);justify-content:center;gap:clamp(10px,2vw,22px);align-items:center}
+  .folder-card{
+    position:relative;background:#fff;border-radius:6px 18px 18px 18px;
+    padding:clamp(14px,2.4vw,26px) 14px clamp(12px,2vw,22px);text-align:center;
+    box-shadow:0 6px 16px rgba(0,0,0,.14);
+    background-image:
+      linear-gradient(90deg,rgba(217,116,143,.22) 50%,transparent 50%),
+      linear-gradient(rgba(217,116,143,.22) 50%,transparent 50%);
+    background-size:16px 16px;
+    text-decoration:none;color:var(--ink);
+    transition:transform .2s;
+  }
+  .folder-card::before{
+    content:"";position:absolute;top:-10px;left:0;width:42%;height:12px;
+    background:var(--pink-soft);border-radius:8px 8px 0 0;
+  }
+  .folder-card:hover{transform:translateY(-4px) rotate(-1deg)}
+  .folder-card .ico{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+  .folder-card b{display:block;margin-top:6px;color:var(--pink);font-size:clamp(.85rem,1.7vw,1.1rem)}
+  .folder-card span{font-size:clamp(.72rem,1.4vw,.95rem);word-break:break-all}
 
-h1 {
-    color: #e75491;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
+  /* PENUTUP */
+  .penutup{align-items:center;justify-content:center;text-align:center;color:#fff}
+  .penutup h2{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(1.8rem,5vw,3.4rem);text-shadow:3px 3px 0 rgba(90,58,46,.35)}
+  .penutup p{margin-top:10px;font-size:clamp(.85rem,1.8vw,1.2rem);background:rgba(255,255,255,.2);padding:6px 18px;border-radius:99px}
+  .penutup .foot{display:flex;justify-content:space-between;width:100%;position:absolute;left:0;bottom:16px;padding:0 clamp(20px,4vw,48px);font-size:.8rem;opacity:.9}
 
-.subtitle {
-    color: #bd6590;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
+  .deco{position:absolute;pointer-events:none;font-size:clamp(1rem,2.4vw,1.8rem);opacity:.9}
 
-h2 {
-    color: #e75491;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-p {
-    color: #77566a;
-    line-height: 1.7;
-    font-size: 14px;
-}
-
-/* Informasi diri */
-.info {
-    background: #fff0f7;
-    padding: 18px;
-    border-radius: 18px;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.info p {
-    margin: 8px 0;
-}
-
-/* Hobi */
-.hobby {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 18px 0;
-}
-
-.hobby span {
-    background: #ffd6e8;
-    color: #bd4f85;
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.hobby span:hover {
-    background: #ff8fbd;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Tombol */
-button {
-    border: none;
-    background: linear-gradient(90deg, #ff8fbd, #ec5799);
-    color: white;
-    padding: 13px 28px;
-    border-radius: 25px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 5px 15px #f5a4c9;
-}
-
-footer {
-    margin-top: 25px;
-    color: #d16a9b;
-    font-size: 12px;
-}
-
+  @media (max-width:720px){
+    .slide{aspect-ratio:auto;min-height:420px}
+    .identitas .row{grid-template-columns:1fr}
+    .hobi .grid{grid-template-columns:1fr}
+    .foods{grid-template-columns:1fr}
+    .kontak .cards{grid-template-columns:1fr}
+  }
 </style>
 </head>
-
 <body>
 
-<!-- Hati melayang -->
-<div class="heart" style="left:10%; animation-delay:0s;">♡</div>
-<div class="heart" style="left:30%; animation-delay:2s;">♥</div>
-<div class="heart" style="left:55%; animation-delay:4s;">♡</div>
-<div class="heart" style="left:75%; animation-delay:1s;">♥</div>
-<div class="heart" style="left:90%; animation-delay:3s;">♡</div>
+<!-- SLIDE 1: COVER -->
+<section class="slide cover bg-gingham" data-no="1 / 7" id="beranda">
+  <span class="deco" style="top:8%;left:6%">⭐</span>
+  <span class="deco" style="top:14%;right:8%">🌼</span>
+  <span class="deco" style="bottom:12%;left:10%">🌼</span>
+  <span class="deco" style="bottom:16%;right:7%">⭐</span>
 
-<!-- Kartu Profil -->
-<div class="container">
+  <div class="folder">
+    <div class="tape"></div>
+    <div class="bow">🎀</div>
+    <p class="small">It starts with a folder and a dream.</p>
+    <h1>Profil<span>MAHASISWA</span></h1>
+    <p class="nama-cover">Intan Roudhotul Munawaroh</p>
+  </div>
+  <p class="scroll-hint">↓ scroll ke bawah untuk lanjut</p>
+</section>
 
-    <!-- link foto -->
-    <img
-    src="intan.jpeg"
-    alt="Foto Profil Intan"
-    class="profile">
+<!-- SLIDE 2: IDENTITAS -->
+<section class="slide identitas bg-dots" data-no="2 / 7" id="identitas">
+  <span class="label">Identitas Mahasiswa</span>
+  <div class="row">
+    <figure class="polaroid">
+      <div class="tape"></div>
+      <div class="photo">
+        <span aria-hidden="true">🌷</span>
+        <!-- Unggah fotomu ke repository dengan nama: foto.jpg -->
+        <img src="foto.jpg" alt="Foto profil Intan" onerror="this.remove();">
+      </div>
+      <figcaption>Hi, it's me!</figcaption>
+    </figure>
 
-    <h1>Hi, I'm Intan! ♡</h1>
-
-    <p class="subtitle">
-        Welcome to My Little World 🎀
-    </p>
-
-    <h2>About Me 🌷</h2>
-
-    <p>
-        Halo! Perkenalkan, nama Aku Intan Roudhotul
-        Munawaroh. Aku adalah seseorang yang sangat menyukai
-        hal-hal sederhana. Aku punya kebiasaan memakai cardigan
-        ke mana-mana, aku suka jajan, dan aku orangnya sangat ceroboh hehe...
-        Aku juga suka mencoba makanan yang baru atau yang lagi viral,
-        apalagi makanan pedas. Bagiku, setiap orang punya keunikan masing-masing,
-        begitu juga dengan aku yang punya kebiasaan kecil yang menjadi bagian dari
-        diriku.
-    </p>
-
-    <!-- Identitas Mahasiswa -->
-    <div class="info">
-
-        <p>👩🏻 <b>Nama:</b> Intan Roudhotul Munawaroh</p>
-
-        <p>🪪 <b>NIM:</b> 025241461105</p>
-
-        <p>🎓 <b>Program Studi:</b>
-        Manajemen Informasi dan Komunikasi</p>
-
-        <p>🏫 <b>Kampus:</b>
-        STMM Komdigi Yogyakarta</p>
-
-        <p>💌 <b>Email:</b>
-        intanrdtl578@gmail.com</p>
-
+    <div class="panel">
+      <dl class="data">
+        <dt>Nama</dt><dd>Intan Roudhotul Munawaroh</dd>
+        <dt>NIM</dt><dd>025241461105</dd>
+        <dt>Program Studi</dt><dd>Manajemen Informasi Komunikasi</dd>
+        <dt>Mata Kuliah</dt><dd>Teknologi Internet dan Cloud Computing</dd>
+      </dl>
     </div>
+  </div>
+</section>
 
-    <!-- Hobi -->
-    <h2>My Hobbies ♡</h2>
-
+<!-- SLIDE 3: TENTANG SAYA -->
+<section class="slide tentang bg-mint" data-no="3 / 7" id="tentang">
+  <span class="label">Tentang Saya</span>
+  <div class="panel">
     <p>
-        Beberapa kegiatan yang Aku sukai:
+      Halo! Aku Intan, mahasiswa program studi Manajemen Informasi Komunikasi.
+      Aku suka memakai cardigan karena membuat penampilanku terasa nyaman dan manis.
+      Aku juga suka jajan makanan enak dan senang belanja barang-barang lucu.
+      Warna favoritku adalah pink, jadi banyak hal di sekitarku yang bernuansa pink.
     </p>
+    <p class="quote">"Ceroboh sedikit tidak apa-apa, yang penting terus mencoba."</p>
+  </div>
+</section>
 
-    <div class="hobby">
-        <span>🍳 Cooking</span>
-        <span>🎬 Watching Movies</span>
-    </div>
+<!-- SLIDE 4: HOBI & MINAT -->
+<section class="slide hobi bg-stars" data-no="4 / 7" id="hobi">
+  <span class="label">Hobi &amp; Minat</span>
+  <div class="grid">
+    <div class="tag">🧥 Suka Pakai Cardigan<small>outfit andalan setiap hari</small></div>
+    <div class="tag">🍡 Suka Jajan<small>camilan enak selalu menggoda</small></div>
+    <div class="tag">🛍️ Suka Belanja<small>hunting barang lucu &amp; aesthetic</small></div>
+    <div class="tag">🙈 Suka Ceroboh<small>sering lupa, tapi tetap ceria</small></div>
+    <div class="tag">🎀 Suka Warna Pink<small>favorit sepanjang masa</small></div>
+  </div>
+</section>
 
-    <!-- Tombol interaktif -->
-    <button onclick="showMessage()">
-        Click Me ♡
-    </button>
+<!-- SLIDE 5: MAKANAN KESUKAAN -->
+<section class="slide bg-lilac" data-no="5 / 7" id="makanan">
+  <span class="label">Makanan Kesukaan</span>
+  <div class="foods">
+    <figure class="polaroid">
+      <div class="tape"></div>
+      <div class="photo">
+        <span aria-hidden="true">🍜</span>
+        <!-- Unggah foto makanan dengan nama: makanan1.jpg -->
+        <img src="makanan1.jpg" alt="Makanan kesukaan 1" onerror="this.remove();">
+      </div>
+      <figcaption>Makanan Favorit 1</figcaption>
+    </figure>
+    <figure class="polaroid">
+      <div class="tape"></div>
+      <div class="photo">
+        <span aria-hidden="true">🍰</span>
+        <!-- makanan2.jpg -->
+        <img src="makanan2.jpg" alt="Makanan kesukaan 2" onerror="this.remove();">
+      </div>
+      <figcaption>Makanan Favorit 2</figcaption>
+    </figure>
+    <figure class="polaroid">
+      <div class="tape"></div>
+      <div class="photo">
+        <span aria-hidden="true">🧋</span>
+        <!-- makanan3.jpg -->
+        <img src="makanan3.jpg" alt="Makanan kesukaan 3" onerror="this.remove();">
+      </div>
+      <figcaption>Makanan Favorit 3</figcaption>
+    </figure>
+  </div>
+</section>
 
-    <footer>
-        Made with love by Intan ♡
-        <br>
-        © 2026 My Personal Website
-    </footer>
+<!-- SLIDE 6: KONTAK -->
+<section class="slide kontak bg-green" data-no="6 / 7" id="kontak">
+  <span class="label">Kontak</span>
+  <div class="cards">
+    <a class="folder-card" href="mailto:intanrdtl578@gmail.com">
+      <div class="ico">✉️</div><b>Email</b><span>intanrdtl578@gmail.com</span>
+    </a>
+  </div>
+</section>
 
-</div>
-
-<script>
-function showMessage() {
-    alert("Thank you for visiting my little world! 💗");
-}
-</script>
+<!-- SLIDE 7: PENUTUP -->
+<section class="slide penutup bg-gingham" data-no="7 / 7" style="background-color:var(--pink)">
+  <span class="deco" style="top:10%;left:8%">⭐</span>
+  <span class="deco" style="top:18%;right:10%">⭐</span>
+  <span class="deco" style="bottom:22%;left:14%">🌼</span>
+  <h2>Terima Kasih!</h2>
+  <p>Dipublikasikan dengan GitHub Pages ☁️</p>
+  <div class="foot">
+    <span>Archive</span>
+    <span>Profil Mahasiswa · 2026</span>
+    <span>Intan Roudhotul Munawaroh</span>
+  </div>
+</section>
 
 </body>
 </html>
