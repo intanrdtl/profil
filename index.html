@@ -141,7 +141,7 @@
 
   /* TENTANG */
   .tentang .panel{flex:1;display:flex;flex-direction:column;justify-content:center}
-  .tentang p{font-size:clamp(.9rem,1.9vw,1.3rem);line-height:1.7}
+  .tentang p{font-size:clamp(.88rem,1.8vw,1.25rem);line-height:1.7}
   .tentang .quote{
     margin-top:14px;font-family:'Playfair Display',serif;font-style:italic;
     color:var(--pink);font-size:clamp(.85rem,1.7vw,1.15rem);
@@ -171,26 +171,28 @@
   .foods figcaption{font-size:clamp(.8rem,1.6vw,1.05rem)!important}
 
   /* KONTAK */
-  .kontak .cards{flex:1;display:grid;grid-template-columns:minmax(0,440px);justify-content:center;gap:clamp(10px,2vw,22px);align-items:center}
+  .kontak .cards{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,320px));justify-content:center;gap:clamp(14px,3vw,36px);align-items:center}
   .folder-card{
     position:relative;background:#fff;border-radius:6px 18px 18px 18px;
-    padding:clamp(14px,2.4vw,26px) 14px clamp(12px,2vw,22px);text-align:center;
+    padding:clamp(16px,2.8vw,30px) 14px clamp(14px,2.4vw,26px);text-align:center;
     box-shadow:0 6px 16px rgba(0,0,0,.14);
     background-image:
       linear-gradient(90deg,rgba(217,116,143,.22) 50%,transparent 50%),
       linear-gradient(rgba(217,116,143,.22) 50%,transparent 50%);
     background-size:16px 16px;
     text-decoration:none;color:var(--ink);
-    transition:transform .2s;
+    transition:transform .2s, box-shadow .2s;
+    cursor:pointer;
   }
   .folder-card::before{
     content:"";position:absolute;top:-10px;left:0;width:42%;height:12px;
     background:var(--pink-soft);border-radius:8px 8px 0 0;
   }
-  .folder-card:hover{transform:translateY(-4px) rotate(-1deg)}
-  .folder-card .ico{font-size:clamp(1.6rem,3.4vw,2.4rem)}
-  .folder-card b{display:block;margin-top:6px;color:var(--pink);font-size:clamp(.85rem,1.7vw,1.1rem)}
-  .folder-card span{font-size:clamp(.72rem,1.4vw,.95rem);word-break:break-all}
+  .folder-card:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:0 12px 22px rgba(0,0,0,.2)}
+  .folder-card .ico{font-size:clamp(1.8rem,3.8vw,2.8rem)}
+  .folder-card b{display:block;margin-top:6px;color:var(--pink);font-size:clamp(.95rem,1.9vw,1.25rem)}
+  .folder-card span{display:block;font-size:clamp(.75rem,1.5vw,1rem);word-break:break-all}
+  .folder-card em{display:inline-block;margin-top:8px;font-style:normal;font-size:.75rem;font-weight:600;color:#fff;background:var(--pink);padding:3px 12px;border-radius:99px}
 
   /* PENUTUP */
   .penutup{align-items:center;justify-content:center;text-align:center;color:#fff}
@@ -258,10 +260,12 @@
   <span class="label">Tentang Saya</span>
   <div class="panel">
     <p>
-      Halo! Aku Intan, mahasiswa program studi Manajemen Informasi Komunikasi.
-      Aku suka memakai cardigan karena membuat penampilanku terasa nyaman dan manis.
-      Aku juga suka jajan makanan enak dan senang belanja barang-barang lucu.
-      Warna favoritku adalah pink, jadi banyak hal di sekitarku yang bernuansa pink.
+      Halo, aku Intan! 🎀 Buatku, cardigan itu hampir seperti seragam wajib,
+      rasanya ada yang kurang kalau keluar rumah tanpa itu. Kalau ada jajanan enak lewat,
+      langkahku otomatis berhenti, dan kalau ketemu barang lucu yang seolah minta dibawa pulang,
+      dompetku cuma bisa pasrah. Duniaku serba pink, dari outfit sampai barang-barang kecil di sekitarku.
+      Soal ceroboh? Wah, itu bakatku. Ada saja yang ketinggalan atau tumpah,
+      tapi untungnya aku jago menertawakan diri sendiri. 😆
     </p>
     <p class="quote">"Ceroboh sedikit tidak apa-apa, yang penting terus mencoba."</p>
   </div>
@@ -313,12 +317,28 @@
   </div>
 </section>
 
-<!-- SLIDE 6: KONTAK -->
+<!-- SLIDE 6: KONTAK (klik langsung ke Gmail & Instagram) -->
 <section class="slide kontak bg-green" data-no="6 / 7" id="kontak">
-  <span class="label">Kontak</span>
+  <span class="label">Kontak &amp; Media Sosial</span>
   <div class="cards">
-    <a class="folder-card" href="mailto:intanrdtl578@gmail.com">
-      <div class="ico">✉️</div><b>Email</b><span>intanrdtl578@gmail.com</span>
+    <!-- Klik: langsung membuka Gmail dengan alamat tujuan sudah terisi -->
+    <a class="folder-card"
+       href="https://mail.google.com/mail/?view=cm&fs=1&to=intanrdtl578@gmail.com"
+       target="_blank" rel="noopener">
+      <div class="ico">✉️</div>
+      <b>Email</b>
+      <span>intanrdtl578@gmail.com</span>
+      <em>Kirim Email →</em>
+    </a>
+
+    <!-- Klik: langsung membuka profil Instagram -->
+    <a class="folder-card"
+       href="https://www.instagram.com/intannn_rdtl/"
+       target="_blank" rel="noopener">
+      <div class="ico">📸</div>
+      <b>Instagram</b>
+      <span>@intannn_rdtl</span>
+      <em>Kunjungi Akun →</em>
     </a>
   </div>
 </section>
@@ -339,3 +359,12 @@
 
 </body>
 </html>
+   
+
+  
+
+
+
+
+      
+  
